@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.bg-fuchsia-cyan-gradient {
+    @apply bg-gradient-to-r from-fuchsia-500 via-purple-500 via-40% to-cyan-500;
+}
+
+.text-fuchsia-cyan-gradient {
+    @apply bg-fuchsia-cyan-gradient text-transparent bg-clip-text;
+}
+
+.before-text-fuchsia-cyan-gradient {
+    @apply before:bg-gradient-to-r before:from-fuchsia-500 before:via-purple-500 before:via-40% before:to-cyan-500 before:text-transparent before:bg-clip-text;
+}
+
+.after-text-fuchsia-cyan-gradient {
+    @apply after:bg-gradient-to-r after:from-fuchsia-500 after:via-purple-500 after:via-40% after:to-cyan-500 after:text-transparent after:bg-clip-text;
+}
+
+.hero-text {
+    @apply text-4xl text-white md:text-5xl;
+}
+
+.section-title {
+    @apply hero-text relative font-bold;
+}
+
+.section-title-glow {
+    @apply section-title before:absolute before:blur-lg before-text-fuchsia-cyan-gradient after:absolute after:blur-lg after-text-fuchsia-cyan-gradient;
+}
+
+:root {
+    --default-scrollbar-size: 0.75rem;
+    --default-scrollbar-radius: 10rem;
+    --default-scrollbar-color: hsl(223, 15%, 20%);
+    --default-scrollbar-bg-color: hsl(223, 15%, 10%);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+    height: var(--default-scrollbar-size);
+    width: var(--default-scrollbar-size);
+    background-color: var(--default-scrollbar-bg-color);
+}
+
+::-webkit-scrollbar-corner {
+    background-color: var(--default-scrollbar-bg-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--default-scrollbar-color);
+    border-radius: var(--default-scrollbar-radius);
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--default-scrollbar-bg-color);
+    border-radius: var(--default-scrollbar-radius);
+    margin: 0.25rem;
+}
+
+.grid-fade-out {
+    --_grid-section-stroke: max(1px, 0.12svh);
+    --_grid-cell-stroke: max(1px, 0.08svh);
+    --_grid-cell-size: 20svh;
+    --_grid-section-size: calc(var(--_grid-cell-size) * 5 + var(--_grid-cell-stroke));
+    --_color_section: #5b6466;
+    --_color_cell: #262727;
+    background-image: linear-gradient(
+            var(--_color_section) var(--_grid-section-stroke),
+            transparent var(--_grid-section-stroke)
+        ),
+        linear-gradient(
+            90deg,
+            var(--_color_section) var(--_grid-section-stroke),
+            transparent var(--_grid-section-stroke)
+        ),
+        linear-gradient(
+            var(--_color_cell) var(--_grid-cell-stroke),
+            transparent var(--_grid-cell-stroke)
+        ),
+    linear-gradient(
+            90deg,
+            var(--_color_cell) var(--_grid-cell-stroke),
+            transparent var(--_grid-cell-stroke)
+    ),
+    linear-gradient(
+            180deg,
+            #040404 0%,
+            transparent 50%
+    );
+    background-size:
+        var(--_grid-section-size) var(--_grid-section-size),
+        var(--_grid-section-size) var(--_grid-section-size),
+        var(--_grid-cell-size) var(--_grid-cell-size),
+        var(--_grid-cell-size) var(--_grid-cell-size),
+        cover;
+    background-position: top,
+        calc(
+            50% - (var(--_grid-section-size) + var(--_grid-section-stroke)) / 2
+        ),
+        top, calc(50% - var(--_grid-cell-size) / 2),
+    center;
+}

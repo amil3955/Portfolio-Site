@@ -1,0 +1,22 @@
+{
+    "plugins": [
+        "@trivago/prettier-plugin-sort-imports",
+        "prettier-plugin-tailwindcss"
+    ],
+    "bracketSameLine": true,
+    "arrowParens": "avoid",
+    "tabWidth": 4,
+    "jsxSingleQuote": true,
+    "importOrder": [
+        "^react$",
+        "^three",
+        "^@react-three/fiber(.*)",
+        "^@react-three/drei(.*)",
+        "^@ui/(.*)$",
+        "^[./]",
+        "^(.*)"
+    ],
+    "importOrderSeparation": false,
+    "importOrderSortSpecifiers": true,
+    "importOrderCaseInsensitive": true
+}
