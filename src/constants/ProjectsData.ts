@@ -70,35 +70,6 @@ export type ProjectData = {
  */
 export const PROJECTS: ProjectData[] = [
     {
-        refName: "stich-hub",
-        title: "StichHub",
-        isTeam: true,
-        description: [
-            "Tailor of Choice: Choose from a list of experienced tailors with whom you want to request your order",
-            "3D Configurator: Make changes to your desired design while simultaneously seeing how it looks overall through a 3D model of yourself.",
-            "Online Measurements: We provide an online facility that enables users to accurately provide measurements for their clothes.",
-            "AR Tech:  With our tech, you come one step closer to that. It enables you to know just how your piece is going to turn out."
-        ],
-        tags: ["re.svg","node.svg", "three.svg", "tail.svg", "ts.svg", "gsap.svg"],
-        cta: [
-            {
-                text: "Visit the WebSite",
-                type: "product",
-                href: "https://stichhub.vercel.app/",
-            },
-            {
-                text: "See the Source Code",
-                type: "repository",
-                href: "https://github.com/amil3955/stichhub-react-built",
-            },
-        ],
-        device: {
-            type: "laptop",
-            textureCount: 3,
-            texture: "texture_codehunter.png",
-        },
-    },
-    {
         refName: "sketch-book",
         title: "SketchBook",
         isTeam: false,
