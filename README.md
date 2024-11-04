@@ -1,9 +1,7 @@
 # Amil Sena Rodrigues's Portfolio! 🚀
 
 Hi and welcome to my online portfolio!
-
-I'm thrilled to have you here and share with you my journey as a developer. This portfolio is not just a showcase of my work; it's a reflection of my *passion* for coding, my *dedication* to mastering new technologies, and my commitment to delivering high-quality projects.
-
+I am a 3d web front end developer with a specialized focus in Three.js, R3F and WebGL
 
 ## Exploring the Project
 
